@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <style>
+            /*  attribute*/
+            [class]{
+               border:1px solid black; 
+            }
+            [id]{
+                background-color: steelblue;
+            }
+
+            [class="secOne"]{
+                background-color: darkolivegreen;
+            }
+
+
+
+            /* begins with */
+            /* [id^="h"]{
+                font-family: cursive;
+            } */
+
+           
+
+            /* substring */
+            [id*="adi"]{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+            /*ends with  */
+            /* [id$="ing"]{
+                font-family:fantasy;
+            } */
+
+            [id~="heading"]{
+                color:firebrick;
+            }
+
+            /* entire word */
+            [class~="sec"]{
+                border:3px solid black;
+            }
+           
+           
+           
+        </style>
+    </head>
+    <body>
+        <section class="secOne sectwo">
+            <h2 id="heading-one">Attribute Selectors</h2>
+            <div>
+                <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus aliquid reiciendis vitae saepe esse, similique magnam autem est rerum eius quia fugiat voluptates itaque quod. Repudiandae itaque cumque nesciunt distinctio?</p>
+
+            </div>
+            <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus aliquid reiciendis vitae saepe esse, similique magnam autem est rerum eius quia fugiat voluptates itaque quod. Repudiandae itaque cumque nesciunt distinctio?</p>
+        </section>
+    </body>
+</html>

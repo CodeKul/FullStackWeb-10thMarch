@@ -28,13 +28,40 @@
                 color:red;
             }
 
+            /* immediate children */
+            .mainDiv > p > span{
+                background-color:green;
+            }
+             
+            .internalDiv + p{
+                background-color: greenyellow;
+            }
+
+        .thirdDiv{
+                border:1px solid black;
+            }
+            .thirdDiv p+span{
+                border:3px dashed blue;
+            }
+
+            /* general sibling */
+            .thirdDiv p ~ span{
+                background-color: grey;
+            }
+
+            .mainDiv .pOne{
+                    border:5px dotted slateblue;
+            }
+
+         
+           
         </style>
     </head>
     <body>
         
         
-        <!-- Basic,Descendant selectors,child selector,adjacent sibling,
-        pseudo class,pseudo elements,attribute selectors -->
+        <!-- Basic,Descendant selectors,child selector,adjacent sibling,general sibling
+        grouping selectors,pseudo class,pseudo elements,attribute selectors -->
 
         <!-- class,id -->
     <span>outside article</span>
@@ -42,12 +69,60 @@
     <p id="pOne" class="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, assumenda.</p>
     <p class="two">Lorem ipsum dolor sit amet.</p>
     <article>
-        <div>
+    <div class="mainDiv">
         <a href="forms.html">Click here</a>
-        <p>
+        <p class="pOne">
             <span>lorem</span>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident obcaecati possimus tempore, voluptates natus officiis placeat quidem, amet eum sint ipsam totam non autem nobis commodi veritatis? Culpa nesciunt, impedit adipisci, quam delectus explicabo animi, tempora distinctio optio repellendus reprehenderit eum rerum vero quas? Dicta in pariatur dignissimos incidunt exercitationem eligendi id accusamus ratione! Exercitationem dicta a dolore, ratione consectetur eum culpa repellendus non modi accusantium temporibus consequatur suscipit maiores repellat ut provident perspiciatis esse quasi veniam quisquam nobis. Impedit debitis totam, consequatur eaque et dicta nulla magnam nemo, repudiandae ducimus modi non eum delectus illum. Eligendi aut tenetur temporibus.</p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident obcaecati possimus tempore, voluptates natus officiis placeat quidem, amet eum sint ipsam totam non autem nobis commodi veritatis? Culpa nesciunt, impedit adipisci, quam delectus explicabo animi, tempora distinctio optio repellendus reprehenderit eum rerum vero quas? Dicta in pariatur dignissimos incidunt exercitationem eligendi id accusamus ratione! Exercitationem dicta a dolore, ratione consectetur eum culpa repellendus non modi accusantium temporibus consequatur suscipit maiores repellat ut provident perspiciatis esse quasi veniam quisquam nobis. Impedit debitis totam, consequatur eaque et dicta nulla magnam nemo, repudiandae ducimus modi non eum delectus illum. Eligendi aut tenetur temporibus.
+        </p>
+        <div class="internalDiv">
+            <p>Lorem ipsum dolor sit amet.</p>
         </div>
+        <p>Adjacent to internalDiv</p>
+    </div>
+    <p>Adjacent to mainDiv</p>
     </article>
+
+    <div class="thirdDiv">
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima neque fugiat provident nam nostrum exercitationem consectetur ipsum enim! Vel minima, maiores ipsam ut culpa nulla hic voluptas praesentium modi explicabo odio soluta ullam quis veritatis labore laborum obcaecati nam? Corrupti?
+        </p>
+        <span>First Span</span>
+        <span>Second span</span>
+        <div>
+            <span>span inside div</span>
+        </div>
+        <span>Third Span</span>
+    </div>
+    <p class="group">
+        <span>
+            span inside p
+        </span>
+        adjacent p element
+    </p>
+
+    
+    .group span,
+    .thirdDiv div span,
+    .thirdDiv > p
+    {
+        color:
+        border:
+    }
+   {
+        
+    }
+
+    
+
+   
+
+   
+
+  
+
+
+
+
     </body>    
 </html>
