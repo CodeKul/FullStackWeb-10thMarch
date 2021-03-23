@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <title>Pseudo Classes</title>
+        <style>
+
+        /* a tag pseudo classes */
+        a:link{     /* unvisited */
+                color:green;
+            }
+
+        a:visited{
+            color:orange;
+        }
+        a:active{
+            color:crimson;
+        }
+        a:hover{
+            color:cornflowerblue;
+        }
+
+        div:hover{
+            color:peru;
+        }
+        button:hover{
+            background: purple;
+        }
+
+        input{
+            border:none;
+        }
+        input:focus{
+            background: lightseagreen;
+            border:2px solid red;
+        }
+/* first-child,last-child,only-child,nth-child,first-of-type,last-of-type,only-of type */
+        
+    ul p:first-child{
+        border:2px solid sienna;
+    }
+
+    ul li:last-child{
+        color:springgreen;
+    }
+
+    ul li:only-child{
+        color:purple;  
+    }
+
+    div p:first-child{
+        background: skyblue;
+    }
+
+    div span:only-child{
+        background: rebeccapurple;
+    }
+
+    ul li:first-of-type{
+        font-size: larger;
+    }
+
+    div p:first-of-type{
+        color:red;
+    }
+
+    div p:last-of-type{
+        border:2px dotted green;
+    }
+
+    div b:only-of-type{
+        font-style: italic;
+    }
+
+
+    ul li:nth-child(6){
+        font-size:xx-large;
+    }
+    ul li:nth-last-child(2){
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    ul li:nth-of-type(5){
+        font-size: 30px;
+    }
+
+    div span:nth-of-type(2){
+        font-size: 30px;
+    }
+
+    ul li:nth-last-of-type(1){
+        color:slateblue;
+    }
+
+    
+       
+        
+        </style>
+    </head>
+    <body>
+        <!-- :hover.:link,:focus -->
+        <a href="form-assignment.PNG" target="_blank">Click to view form</a>
+        <div>Inside div</div>
+        <button>Save</button>
+        <input type="text" placeholder="Enter Name">
+
+        ul li:nth-last-child(2)
+
+     
+        <ul>
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3</li>
+            <li>List Item 4</li>
+            <li>List Item 5</li>
+            <li>List Item 6</li>
+        </ul>
+        <ul>
+            <li></li>
+        </ul>
+
+        <div>
+           
+            <span>span one</span>
+           
+            <p>p one</p>
+            <p>p two</p>
+            <span>span three</span>
+            <p>three</p>
+            <span>span two</span>
+            <span>span four</span>
+            <b>Bold</b>
+
+        </div>
+
+      
+
+    </body>
+</html>
