@@ -2,48 +2,46 @@
     <head>
         <style>
             .heading{
-                text-align:center;
+                text-align: center;
+                font-size:35px;
+                text-align: center;
+                color:darkolivegreen;
+                
             }
 
-            nav ul{
-                display:flex;
-                background-color: whitesmoke;
-                height:45px;
-                justify-content: space-around;
-                align-items: center;
-
-            }
+            /* display : inline,inline-block,block*/
+            /* block which behave like inline elements */
+            /* header span{
+                display:block;
+            } */
 
             nav ul li{
-                list-style:none;
+                display: inline;
+                /* border:1px solid black; */
+                padding:15px;
+                margin-right:25px;
+                
+            }
+            nav ul li:hover{
+                color:green;
+                cursor:pointer;
             }
 
-            figure {
-               margin-left:40%;
+            nav{
+                background-color:whitesmoke;
+                height: 35px;
             }
 
-            footer{
-                background-color: whitesmoke;
-                height:50px;
+          main{
+             max-width:980px;
+             margin:0 auto;
+          }  
 
-            }
-            footer p,address{
-                text-align: center;
-            }
-            .content{
-                display: flex;
+          main figure{
+                text-align:center;
 
-            }
-            .content .section-one{
-                width:70%;
-            }
-            .content .section-two{
-                width:30%;
-                background-color: black;
-                color:white;
-                padding:10px;
-                border-radius:7px;
-            }
+          }
+
 
         </style>
     </head>
@@ -51,7 +49,8 @@
         <!-- aside,main,header,footer,article,nav,section,address,figure,figcaption -->
        <header>
            <h1 class="heading">Semantic Tags</h1>
-       </header>
+           <span>Inline</span>
+        </header>
         <nav>
             <ul>
                 <li>Home</li>
@@ -61,6 +60,7 @@
                 <li>Sign In</li>
                 <li>News</li>
             </ul>
+            
         </nav>
 
         <main>

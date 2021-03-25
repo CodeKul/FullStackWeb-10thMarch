@@ -1,6 +1,8 @@
 <html>
     <head>
+        <title>Pseudo Elements</title>
         <style>
+
             p::first-letter{
                 font-size:30px;
                 font-weight: 300;
@@ -14,6 +16,28 @@
                 height:300px;
                 width: 400px;
             }
+
+            p::selection{
+                background-color: coral;
+                color:darkgray;
+            }
+
+            p::before{
+                content:"->" ;
+                
+
+            }
+            p::after{
+                content:"$";
+            }
+            .numbers li{
+                list-style: none;
+                font-size:20px;
+                
+            }
+            .numbers li::before{
+                content: url("bullet.PNG");
+            }
         </style>
     </head>
     <body>
@@ -22,6 +46,13 @@
           <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit optio fugit eius sequi hic doloremque sint nostrum. Voluptatum nemo ab error praesentium cum, sequi iure maiores dolorum architecto! Nemo magni fugit nihil, eum harum similique repellendus sequi incidunt expedita nisi. Aperiam, libero veritatis facere optio sint facilis perferendis. A, error?
           </p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad.</p>
           </div>
+
+          <ul class="numbers">
+              <li>One</li>
+              <li>Two</li>
+              <li>Three</li>
+          </ul>
     </body>
 </html>
