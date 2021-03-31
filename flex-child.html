@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* justify-content-horizontally,align-items - vertically ,align-content -both axis */
+        section{
+            border:1px solid black;
+            padding:30px;
+            height:500px;
+            width: 70%;
+            flex-wrap: wrap;
+            display: flex;
+            
+           align-items:center;
+        }
+        .item{
+            height:100px;
+            width:100px;
+            background-color: cadetblue;
+            border:1px solid black;
+           
+        }
+
+    /*child properties -  flex-grow,flex-shrink,flex-basis */
+    /* flex:flex-grow flex-shrink flex-basis
+    flex:0 1 auto */
+        .item1{
+            align-self:flex-start;
+        }
+
+      
+        .text{
+            background-color: cornflowerblue;
+            border:1px solid black;
+        }
+
+        .parent{
+            display: flex;
+            border:1px solid black;
+        }
+
+        .text1{
+            flex-grow: 1;
+        }
+
+    
+      .text2{
+          flex-grow: 0;
+      }
+      .text3{
+          flex-grow: 1;
+      }
+    </style>
+</head>
+<body>
+    <!-- <section>
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+   
+    </section> -->
+
+    <div class="parent">
+        <div class="text text1">CSS</div>
+        <div class="text text2">Is</div>
+        <div class="text text3">Awesome</div>
+    </div>
+</body>
+</html>
