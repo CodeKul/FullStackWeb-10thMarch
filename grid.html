@@ -9,10 +9,23 @@
         .container{
             border:1px solid black;
             display:grid;
-            grid-template-columns: 200px 200px;
-            grid-template-rows: 200px 200px 200px;
-            
-           
+            grid-template-columns: 200px 200px 200px;
+            grid-template-rows: 80px 80px 80px;
+
+            /* grid-template-columns:50% 40% ; */
+            /* grid-template-rows:20% 10%; */
+
+            /* grid-template-columns: repeat(3,100px) 200px; */
+            /* grid-template-rows:repeat(3,50px) */
+
+            /* grid-template-columns:1fr 200px 2fr ; */
+            /* grid-template-columns:minmax(100px,200px) 200px ; */
+            /* grid-template-columns:repeat(4,1fr) ; */
+            /* grid-template-rows: repeat(3,50px); */
+            /* grid-template-areas:'one one one one'; */
+
+            /* grid-gap:10px; */
+            grid-row-gap: 10px;
         }
         .item{
             background-color: green;
@@ -20,6 +33,44 @@
             padding:10px;
             border:1px solid black;
         }
+
+        .item-1{
+            /* grid-area:"one"; */
+
+            /* grid-column-start: 1;
+            grid-column-end:4 ; */
+
+            /* grid-column:1/span 3; */
+            grid-column:1/4;
+
+
+
+        }
+        .item-2{
+            /* grid-area:"two"; */
+
+            grid-row-start:2;
+            grid-row-end: 4;
+
+            grid-row:2/4
+        }
+        .item-3{
+            /* grid-area:"three"; */
+            grid-row-start:2; 
+            grid-row-end:4;
+        }
+        .item-4{
+            /* grid-area:"four"; */
+            grid-row-start:2; 
+            grid-row-end:4; 
+        }
+        .item-5{
+            /* grid-area:"five"; */
+        }
+        .item-6{
+            /* grid-area:"six"; */
+        }
+
     </style>
 </head>
 <body>
@@ -30,6 +81,10 @@
         <div class="item item-4">Item 4</div>
         <div class="item item-5">Item 5</div>
         <div class="item item-6">Item 6</div>
+        <div class="item item-7">Item 7</div>
+        <div class="item item-8">Item 8</div>
+        <div class="item item-9">Item 9</div>
+       
     </div>
 </body>
 </html>
