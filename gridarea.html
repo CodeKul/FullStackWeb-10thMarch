@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display:grid;
+            grid-gap:5px;
+            grid-template-areas:'header header header'
+                                'main main sidebar'
+                                'footer footer footer';
+        }
+        .item{
+            background-color: olivedrab;
+            border:1px solid green;
+            padding:15px;
+
+        }
+        #one{
+
+            grid-area:header;
+        }
+        #two{
+            grid-area:main;
+        }
+        #three{
+            grid-area:sidebar;
+        }
+        #four{
+            grid-area:footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="item item-1" id="one">Item 1</div>
+    <div class="item item-2" id="two">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit aliquam esse a. Tempora tempore dolores tenetur facere nemo, provident obcaecati dolorum corrupti fugiat? Ullam quod atque delectus libero facilis amet? Id explicabo earum similique eos sint unde rerum, iure at non ab nostrum, amet animi. Quia eius veniam maiores rerum?</div>
+    <div class="item item-3" id="three">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, consequatur. Cum quam minus aperiam et dicta inventore consequatur perferendis magnam excepturi, omnis vel ratione enim, nulla deleniti. Similique quos quod sit perferendis doloremque, eligendi fuga nostrum in eveniet accusantium tempore!</div>
+    <div class="item item-4" id="four">Item 4</div>
+    <!-- <div class="item item-5">Item 5</div>
+    <div class="item item-6">Item 6</div> -->
+    </div>
+</body>
+</html>
