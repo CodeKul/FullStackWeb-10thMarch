@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:100px;
+            height: 100px;
+            background-color: chocolate;
+            animation-name:moveBox;
+            animation-duration:4s;
+            animation-direction:normal;
+            animation-iteration-count: 1;
+            position: relative;
+            /* animation-play-state: paused; */
+            animation-fill-mode:forwards;
+        }
+
+        div:hover{
+            animation-play-state: running;
+        }
+
+
+        @keyframes moveBox{
+            0%{
+                background-color:chocolate;left:0;top:0
+            }
+            25%{
+                background-color:green;left:200px;top:0
+            }
+            50%{
+                background-color:purple;left:200px;top:200px;
+            }
+            75%{
+                background-color:yellowgreen;left:0;top:200px;
+            }
+            100%{
+                background-color:black;left:0;top:0
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
