@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //primitive - Number,String,Boolean,undefined,null
+        //non-primitive-arrays,objects
+
+        var x ="100"
+        //String
+        let firstName = "ABC"
+        console.log(firstName)
+        let city='XYZ'
+        //ES-6 //template literals
+        let info = `FirstName:${firstName}`
+        console.log(info)
+
+        //Boolean
+        let isActive =false
+        if(isActive == true){
+            console.log("Active")
+        }else{
+            console.log("Inactive")
+        }
+
+
+        //undefined
+
+        let myVar
+        console.log(myVar)
+        
+        //null
+        let myvar2=null
+        console.log(myvar2)
+
+        //Arrays
+        //length - property,push,pop,shift,unshift,filter,map,foreach,reduce,sort,slice,splice
+        //indexing starts with 0
+        let numbers = [10,20,40,60,"Hello"]
+        console.log(numbers[2])
+        console.log(numbers.length)
+
+        //Objects
+    //     class Employee{
+    //         name
+    //         city
+    //         salary
+
+    //     }
+    //    let abc =  new Employee()
+    //    let xyz =new Employee()
+
+
+    //literal object
+    //key-value pairs
+    let john={
+        firstName:"john",
+        lastName:"doe",
+        salary:30000,
+        city:"Pune"
+    }
+
+    console.log(john.lastName)
+
+    let sam ={
+        firstName:"sam",
+        city:"Mumbai"
+    }
+    console.log(sam.city)
+
+
+    </script>
+</body>
+</html>
