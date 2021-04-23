@@ -24,6 +24,55 @@
             console.log(j)
             j++
         }while(j>2)
+
+
+        let states =["Maharashtra","Gujrat","west-Bengal","Tamil Nadu"]
+        // for(let k=0;k<states.length;k++){
+        //     console.log(states[k])
+        // }
+
+        //for..of
+        for(state of states){
+            console.log(state)
+        }
+
+        let st={
+            stateName:"Maharashtra",
+            stateCapital:"Mumbai",
+            abc:10,
+            xyz:100
+        }
+       
+        //for..in
+        for(x in st){
+            console.log(`${x} : ${st[x]}`)
+        }
+
+        let emp=[
+        {
+            firstName:"ABC",
+            city:"pune",
+            salary:40000
+        },
+        {
+            firstName:"XYZ",
+            city:"pune",
+            salary:40000
+        },
+        {
+            firstName:"poq",
+            city:"pune",
+            salary:40000
+        },
+        {
+            firstName:"mnb",
+            city:"pune",
+            salary:40000
+        }
+    ]
+        
+console.log(emp[2].firstName)
+
     </script>
 </body>
 </html>

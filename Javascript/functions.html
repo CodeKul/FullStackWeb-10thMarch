@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=100
+        let b =399
+        function addition(){
+            return a+b
+        }
+       let output = addition()
+       output = output+500
+       console.log(output)
+      
+       //parameters and arguments 
+       function multiply(x =10,y=30)  //default parameters
+       {
+           return x*y
+       }
+       let multiplication = multiply(50,10)  //arguments
+       console.log(multiplication)
+
+       //Arrow Function , Function Expression 
+       //ES 6 
+    //    let q =30
+    //    let p =10 
+       let subtraction=(q,p)=>{
+           let result = q-p
+           console.log(result)
+       }
+       
+       console.log(subtraction(30,10))
+    </script>
+</body>
+</html>
