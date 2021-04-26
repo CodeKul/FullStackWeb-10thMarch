@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // length,push,pop,shift,unshift,splice,slice,
+        //concat,map,foreach
+
+        //Stack - LIFO
+        //Queue - FIFO
+
+        let numbers=[30,50,40,10,99]
+        
+        numbers.push(100)
+        numbers.push(80)
+        numbers.pop()
+        numbers.pop()
+        numbers.pop()
+        console.log(numbers)
+
+        //adding to the beginning of the array
+        numbers.unshift(900)
+        numbers.unshift(700)
+        numbers.unshift(500)
+        console.log(numbers)
+        //removing from  the beginning of the array
+        numbers.shift()
+        console.log(numbers)
+
+        let seasons=["Summer","Winter","Rainy"]
+       // splice(startindex,deleteCount,newElements)
+       seasons.splice(1,0,"Spring")
+        console.log(seasons)  //Summer,Spring,Winter,Rainy
+        let output = seasons.splice(1,2)  
+        console.log(seasons)//Summer,Rainy
+        let result = seasons.splice(0,1)
+        console.log(result)//Summer
+        console.log(seasons)//Rainy
+
+        seasons.splice(1,0,"Winter","Autumn","Spring")
+       console.log(seasons)
+
+       let countries=["India","USA","China"]
+       
+
+       let newArr= seasons.concat(countries,numbers)
+       console.log(newArr) 
+
+
+
+    </script>
+</body>
+</html>
