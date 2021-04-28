@@ -37,7 +37,16 @@
         // var - globally scoped,locally/function scoped
         //let , const -block scoped
     
+        var st="Mh"
+        function hello(){
+            var city="Pune"
+            console.log(city)
+            console.log("Inside function")
+        }
 
+        console.log(st)
+        hello()
+        console.log(city)
 
 
     </script>

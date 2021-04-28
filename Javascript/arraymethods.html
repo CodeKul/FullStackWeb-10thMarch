@@ -45,12 +45,38 @@
         seasons.splice(1,0,"Winter","Autumn","Spring")
        console.log(seasons)
 
-       let countries=["India","USA","China"]
+       let countries=["India","USA","China","Japan","Germany"]
        
 
        let newArr= seasons.concat(countries,numbers)
        console.log(newArr) 
 
+
+       //slice(start,end)
+       //original array not modified
+       let x = countries.slice(1,4) 
+       console.log(x)
+       console.log(countries)
+
+
+       //forEach
+       //modifies original array
+       let sum=0
+       let prices=[500,10000,300,5000,900]
+    //    prices.forEach((price,id)=>prices[id]=price)
+
+        prices.forEach((item,id)=>sum += prices[id])
+       console.log(sum)
+       
+
+       //map
+       //returns a new array 
+       prices.map((i,id)=>sum += i)
+       console.log(sum)
+
+       let z = prices.map((i,id)=>i-10)
+       console.log(prices)
+       console.log(z)
 
 
     </script>
