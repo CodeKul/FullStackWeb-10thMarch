@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="pID">Inside p</p>
+    <p id="pTwo">Inside p</p>
+    <button type="button" id="btn">Change content</button>
+   
+    <input type="text" onkeydown="handleInputChange()">
+    <span id="ip"></span>
+
+    <button onmouseover="handleHover()">Mouse Over</button>
+    <p id="hover"></p>
+    <script>
+        //onclick,onmouseover,ondblclick,onmouseout,onfocus
+        //onkeyup,onkeydown,ontouchstart,ontouchend
+        //button click -event
+        //what happens on button click is event handling
+        //addEventListener(event,function,useCapture)
+
+        function handleClick(){
+            document.getElementById("pID").innerHTML="Content changed"
+        }
+        function handleInputChange(){
+            document.getElementById("ip").innerHTML="Key Pressed"
+        }
+
+        function handleHover(){
+            document.getElementById("hover").innerHTML="Over a button"
+        }
+
+    document.getElementById("btn").addEventListener('click',handleClick)
+     
+    document.getElementById("btn").addEventListener('click',()=>{
+        document.getElementById("pTwo").innerHTML="Second P"
+    })
+
+
+   //Random Quotes
+   //Math.random
+   //[{quote:"ABBC",author:""},{quote:"poiu",author},{}...]
+    //["abbc","tyu"]
+    
+    </script>
+</body>
+</html>

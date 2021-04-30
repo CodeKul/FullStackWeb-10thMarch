@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p-shadow{
+            border-radius: 5px;
+            border:1px solid black;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>April 2021</h2>
+    <p id="pOne" style="color: chocolate;" class="p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet possimus quod error in maiores aperiam pariatur mollitia dolorum quia aliquid delectus commodi, provident sapiente fugiat nostrum! Culpa ex ipsum nam, laborum corporis deleniti eum deserunt sapiente laboriosam repudiandae est amet, labore facilis, aperiam odio voluptatem nisi aliquid? Porro, reprehenderit debitis?</p>
+
+
+    
+    <script>
+        
+        //setAttribute,getAttibute,style,classList,getAttributeNames
+        let h2 = document.querySelector('h2')
+        h2.setAttribute("id","heading")
+        console.log(h2)
+        let p = document.getElementById('pOne')
+        p.style.width="450px"
+        p.style.color="green"
+        p.style.backgroundColor="grey"
+        let x =p.getAttributeNames()
+        p.classList.add("text", "p-shadow")
+        p.classList.remove("p")
+        p.classList.toggle("t-class",true)
+        console.log(x)
+        
+    </script>
+</body>
+</html>
