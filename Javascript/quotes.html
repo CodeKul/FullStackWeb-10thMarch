@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button onclick="createQuote()">Display Quote</button>
+        <h3 id="display"></h3>
+        <h4 id="author"></h4>
+    </div>
+    <script>
+        let quotes=[
+        {
+          quote:"Honesty is the best policy" ,
+          author:"--" 
+        },
+        {
+            quote:"loremqwertyuiopsdfghjkl" ,
+          author:"abc"
+        },
+        {
+          quote:"asdfghjkl" ,
+          author:"def"
+        },
+        {
+            quote:"secondlast" ,
+          author:"def"
+        },
+        {
+            quote:"last" ,
+          author:"def"
+        },
+        {
+            quote:"Hello" ,
+          author:"asd"
+        },
+        {
+            quote:"world" ,
+          author:"def"
+        }]
+        function createQuote(){
+            
+                let r= Math.floor(Math.random()*quotes.length)
+                console.log(r)
+                let quoteText=document.getElementById("display")
+                let author=document.getElementById("author")
+                quoteText.innerHTML=`<i>${quotes[r].quote}</i>`
+                author.innerHTML=`<i>${quotes[r].author}</i>`
+        }
+    </script>
+</body>
+</html>
