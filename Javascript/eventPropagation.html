@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="divOne" style="border:1px solid black">
+        <span style="border:1px solid black">Span</span>
+        <form onclick="clickForm()" style="border:1px solid red">
+            <p style="border:1px solid black" id="pEvent">Inside P
+                <span style="border:1px solid black" onclick="spanClick()">second span</span>
+            </p>
+        </form>
+    </div>
+    <script>
+        //addEventListener('click',function,useCapture)
+        //events bubble by default
+        //useCapture is boolean value (by default false)
+        //Bubbling and capturing
+
+        function clickForm(){
+            console.log("Form clicked")
+        }
+        function spanClick(){
+            console.log("Span clicked")
+        }
+        let p = document.getElementById("pEvent")
+        p.addEventListener('click',()=>{
+            console.log("PClicked")
+        })
+
+    </script>
+</body>
+</html>
