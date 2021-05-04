@@ -27,14 +27,15 @@
        body.append(h1)
        let div= document.createElement('div')
 
-       let span = document.createElement('span')
-        span.innerText="Inside span"
-
        let p = document.createElement('p')
-       p.innerText="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis numquam quisquam itaque. Est molestiae dolores consectetur tempora quibusdam, corporis quas alias quidem culpa voluptates dolorem voluptatem aspernatur sunt doloremque commodi? Ipsum quisquam delectus quam unde. Nihil rem dolores saepe aliquam."
-    
-        
-
+       let pContent = document.createTextNode("Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis numquam quisquam itaque. Est molestiae dolores consectetur tempora quibusdam, corporis quas alias quidem culpa voluptates dolorem voluptatem aspernatur sunt doloremque commodi? Ipsum quisquam delectus quam unde. Nihil rem dolores saepe aliquam.")
+        p.append(pContent)
+       
+       let span = document.createElement('span')
+       span.innerText="lorem"
+    //    let spanContent = document.createTextNode("lorem")
+    //    span.appendChild(spanContent)
+      
        let ul = document.createElement('ul')
 
        let li=document.createElement('li')
@@ -50,8 +51,11 @@
        ul.append(liTwo)
        ul.append(liThree)
 
-       p.append(span)
+       //p.appendChild(span)
+        //
        div.append(p)
+       //insertBefore(the node you want to insert,before which node you want to insert)
+       p.insertBefore(span,pContent)
        div.append(ul)
        body.append(div)
        console.log(div)
