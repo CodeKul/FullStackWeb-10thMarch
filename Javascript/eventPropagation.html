@@ -7,11 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="divOne" style="border:1px solid black">
+    <div id="divOne" style="border:1px solid black" onClick="divClick()">
         <span style="border:1px solid black">Span</span>
-        <form onclick="clickForm()" style="border:1px solid red">
-            <p style="border:1px solid black" id="pEvent">Inside P
-                <span style="border:1px solid black" onclick="spanClick()">second span</span>
+        <form style="border:1px solid red;padding:10px" id="evntform">
+            <p style="border:1px solid black;padding:10px" id="pEvent">Inside P
+                <span style="border:1px solid black;padding:10px" onclick="spanClick(event)">second span</span>
             </p>
         </form>
     </div>
@@ -24,13 +24,26 @@
         function clickForm(){
             console.log("Form clicked")
         }
-        function spanClick(){
+        function spanClick(event){
+            
             console.log("Span clicked")
         }
+
+        function divClick(){
+            console.log("Div clicked")
+        }
         let p = document.getElementById("pEvent")
-        p.addEventListener('click',()=>{
+        p.addEventListener('click',(e)=>{
+            e.stopPropagation()
+            // e.stopImmediatePropagation()
             console.log("PClicked")
         })
+        p.addEventListener('click',()=>{
+            console.log("P second handler")
+        })
+
+        let form = document.getElementById("evntform")
+        form.addEventListener('click',clickForm)
 
     </script>
 </body>

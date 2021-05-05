@@ -15,20 +15,26 @@
         function addItem() {
            let inputItem = document.getElementById("todotext").value
            console.log(inputItem)
+           let i =document.createElement("i")
+           const iconClass = "far fa-trash-alt"
+           i.setAttribute('class',iconClass)
+           console.log(i)
            var ul = document.createElement('ul')
            let li = document.createElement('li')
-           //li.setAttribute("class","fa")
+           
            console.log(li)
            var remove=document.createElement('button')
-           //let icon = document.getElementById()
-           remove.innerHTML="Delete"
-           remove.addEventListener('click',()=>{
+           var span=document.createElement('span')
+           span.append(i)
+           //remove.innerHTML="Delete"
+           span.addEventListener('click',()=>{
                li.remove()
            })
            li.append(inputItem)
-           li.append(remove)
+           li.append(span)
            ul.append(li)
            document.body.append(ul)
+           
 
            document.getElementById("todotext").value=""
         }

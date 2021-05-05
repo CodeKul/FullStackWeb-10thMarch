@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form,div,p{
+            padding:10px;
+            border:2px solid black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <form id="formElement">Inside Form
+        <div id="divElement">Inside Div
+            <p id="pElement">Inside P</p>
+        </div>
+    </form>
+    <script>
+        let form = document.getElementById("formElement")
+        let div=document.getElementById("divElement")
+        let p =document.getElementById("pElement")
+        form.addEventListener('click',(e)=>{
+            console.log("Form clicked",e.target)
+        },true)
+        div.addEventListener('click',(e)=>{
+            console.log("Div clicked",e.target)
+        },true)
+
+        p.addEventListener('click',(e)=>{
+            console.log("P clicked",e.target)
+        })
+
+    </script>
+</body>
+</html>
