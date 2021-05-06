@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //rest parameter and spread syntax
+        //...
+        function sum(a,c,...b) //rest parameter
+        {
+            let addition = 0
+            for(x of b){
+                addition+=x
+            }
+            console.log(addition)
+        }
+       sum(1,2,8,9,3)
+       //console.log(output)
+
+       function numbers(p,q,r,s){
+           console.log(p,q,r,s)
+       }
+       let nos=[100,300]
+    
+       numbers(5,...nos,30) //spread syntax
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //fetch,axios,xmlHttpRequest
+//prime nos(1-50),reversing the str,armstrong number,fibonacci,
+
+
+
+        //destructuring
+        let str = "May"
+        
+        let[x,y,z]=str
+        console.log(x,y,z)
+
+        let arr=[100,400]
+        let strArr = ["Hello","world","2021"]
+        let[one,,two]=strArr
+        console.log(one, two)
+
+        let sqrArr=[2,4,9,16,25,36]
+        let[c,v,...newArr]=sqrArr
+        console.log(newArr,c,v)
+
+        //Object destructuring
+        let person={
+            firstName:"ABC",
+            city:"Pune",
+            salary:40000,
+            address:{
+                street:"xyz",
+                houseNo:10
+            },
+            skills:["Java","SpringBoot"]
+
+        }
+        
+        let {city,salary,firstName,address:{street,houseNo},address,skills:[m,n],skills}=person
+        console.log(firstName,city,salary,houseNo,street,address,m,n,skills)
+    </script>
+</body>
+</html>
