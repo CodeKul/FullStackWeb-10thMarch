@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, voluptas! Omnis fugit culpa facilis, distinctio iusto porro. Possimus enim expedita delectus at quis, illum libero minus laborum commodi ex officia.
+    </p>
+
+     <a href="#" id="font12">twelve</a>
+     <a href="#" id="font16">sixteen</a>
+    <script>
+        //closures -combination of a function and its lexical scope
+        function fun(){
+            var a =400
+            b()
+            function b(){
+                console.log(a)
+            }
+        }
+        fun()
+
+
+        function x(){
+            var x =50
+            function y(){
+                console.log(x)
+            }
+           return y
+        }
+       let result = x() //function y()
+       result()
+
+       function changeSize(fs){
+                
+                function changed(){
+                    document.body.style.fontSize=fs+'px'
+                }
+
+             return changed  
+       }
+
+       var changed = changeSize(12)
+      
+       document.getElementById("font12").addEventListener('click',changed)
+      // document.getElementById("font16").addEventListener('click',twelve)
+    </script>
+</body>
+</html>
