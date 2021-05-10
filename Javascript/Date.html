@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Date
+        //YYYY-MM-DD
+        //January - 0 December -11
+        //1)new Date()
+        //2)new Date(year,month,day,hrs,min,sec,ms)
+       // 3)new Date("2021-05-09")
+       //4)new Date(milliseconds)
+//+5:30
+       const currentDate = new Date()
+       console.log(currentDate)
+
+       const birthDate = new Date("2000-09-01") //yyyy-mm-dd
+       console.log(birthDate)
+
+       const newDate = new Date("01-09-1999")  //mm-dd-yyyy
+       console.log(newDate)
+
+       const newDate1 = new Date("5 Jan 2022")  //mm-dd-yyyy
+       console.log(newDate1)
+
+       const newDate2 = new Date("5/1/2022")  //mm-dd-yyyy
+       console.log(newDate2)
+
+       const dtTime = new Date(2020,03,02,20,30,50,60)
+        console.log(dtTime)
+
+        const dtTime1 = new Date(90200000000)
+        console.log(dtTime1)
+
+
+        //getFullYear(),getMonth(),getDay(),getDate(),getHours(),getMinutes(),getUTCDate()
+        //setFullYear(),setMonth,setDay()
+        //now()
+
+        let x =Date.now()
+        console.log(x)
+
+        let milliDate = new Date(x)
+        console.log(milliDate)
+
+        let myDate = new Date()
+        console.log(myDate)
+
+        let z = myDate.getDate()
+        console.log(z)
+
+        let day =myDate.getDay()
+        console.log(day)
+
+        let month = myDate.getMonth()
+        console.log(month)
+
+        let year = myDate.getFullYear()
+        console.log(year)
+
+        let hrs = myDate.getHours()
+        console.log(hrs)
+
+        let min = myDate.getMinutes()
+        console.log(min)
+
+        let sec = myDate.getMilliseconds()
+        console.log(sec)
+
+        let utcDate = myDate.getUTCDate()
+        console.log(utcDate)
+
+        let utchours =myDate.getUTCHours()
+        let utcmin =myDate.getUTCMinutes()
+        let utcsec =myDate.getUTCSeconds()
+
+        let utcoffset = myDate.getTimezoneOffset()  //gives the diff betwee local and UTC time
+                                                    //in minutes.
+        console.log(utcoffset)
+
+        console.log(utchours,utcmin,utcsec)
+
+
+        let newMyDate = new Date()
+        newMyDate.setFullYear(2022)
+       
+
+        newMyDate.setMonth(9)
+        console.log(newMyDate)
+
+    </script>
+</body>
+</html>
