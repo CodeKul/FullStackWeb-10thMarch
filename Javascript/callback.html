@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //setTimeout(function,milliseconds,args)
+        // function greet(){
+        //     console.log("Good Afternoon")
+        // }
+        // setTimeout(greet,5000)
+        // console.log("Hello World")
+
+        //callback - functions which are passed as a parameter
+        // to another function
+
+       function greet(msg){
+           console.log("Good Afternoon")
+           msg()
+       }
+        setTimeout(greet,5000,msg)
+       function msg(){
+           console.log("Hello World")
+       }
+
+
+    //    let salary =5000
+    //    let empId = 100
+       function salaryCheck(empId,salary,modifySalary){
+           if (salary > 0 && empId === 100){
+                modifySalary(salary)
+           }else{
+               console.log("Please try again later")
+           }
+       }
+
+       function modifySalary(salary){
+            salary = salary + 5000
+            displaySalary(salary)
+       }
+
+
+       function displaySalary(salary){
+           console.log("Salary is : "+ salary)
+       }
+    
+    setTimeout(salaryCheck,3000,100,10000,modifySalary)
+    
+    //drawback - callback hell
+    //solution - promises
+    //async await
+    </script>
+</body>
+</html>
