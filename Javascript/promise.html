@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //let p = new Promise(function(resolve,reject){
+
+        //})
+
+         
+
+
+
+        let count=false
+        let countPromise = new Promise((resolve,reject)=>{
+            if(count === true){
+                resolve("Count has value")
+            }else{
+                reject("Count is false")
+            }
+        })
+
+        console.log(countPromise)
+
+
+        let salary=5000
+        let getSalary = new Promise(
+            function(resolve,reject){
+                if(salary > 0){
+                    resolve(salary)
+                }else{
+                    reject("Please try again")
+                }
+            }
+        )
+        .then(function(salary){
+            salary = salary + 7000
+            return salary
+        })
+        .then(function(salary){
+            salary=salary + salary*0.05
+            return salary
+        })
+        .then(function(salary){
+            console.log("Updated Salary : "+salary)
+        })
+        .catch(function(errmsg){
+            console.log(errmsg)
+        })
+
+
+
+        let isActive = false
+        let emp = new Promise((resolve,reject)=>{
+            if(isActive)
+            {
+                let employee ={
+                    firstName:"ABC",
+                    city:"Pune"
+                }
+                resolve(employee)
+            }else{
+                reject("Invalid Employee")
+            }
+        })
+        .then(function(employee){
+            console.log(employee.firstName)
+            console.log(employee.city)
+        }).catch(function(msg){
+            console.log(msg)
+        })
+
+
+
+
+    </script>
+</body>
+</html>
