@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let data = false
+    let promise  = new Promise(function(resolve,reject){
+        
+        setTimeout(function(){
+            if(data){
+                resolve("Resolved")
+            }else{
+                reject("Rejected")
+            }
+        },4000)
+    }) 
+
+
+   
+
+    async function usePromise(){
+        try{
+            let output = await promise
+            console.log(output)
+            console.log("Inside usePromise")
+        }catch(errMsg){
+            console.log(errMsg)
+        }
+    }
+   
+   usePromise()
+
+
+
+   async function greet(){
+        console.log("Inside greet")
+        return Promise.resolve("Resolved")
+   }
+
+   greet().then(function(result){
+    console.log(result)
+   })
+</script>
+</body>
+</html>
