@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- firstName , email,gender,city,subscribe -->
+    <form>
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName"><br><br>
+
+        <label for="email">Email</label>
+        <input type="email" id="email"><br><br>
+
+        <label for="gender">Gender</label><br>
+        <input type="radio" name="gender" id="selectgender" value="male">
+        <label for="Male">Male</label>
+        <input type="radio" name="gender" value="female" id="selectgender1">
+        <label for="female">Female</label><br><br>
+
+        <select name="city" id="city">
+            <option value="pune">Pune</option>
+            <option value="Nasik">Nasik</option>
+            <option value="Kolhapur">Kolhapur</option>
+        </select><br><br>
+
+        <label for="Subscription">Do you want to subscribe?</label>
+        <input type="checkbox" name="status" id="status" value="Yes"><br><br>
+
+        <button type="button" onclick="getData()">Submit</button>
+
+    </form>
+
+
+    <script>
+        function getData(){
+            let firstName = document.getElementById("firstName").value
+            let email = document.getElementById("email").value
+           
+            let genderArray = document.getElementsByName("gender")
+            let gender
+            // if(gender[0].checked ===true ){
+            //     console.log(gender[0].value)
+            // }else{
+            //     console.log(gender[1].value)
+            // }
+            for(let i = 0;i<genderArray.length;i++){
+                    if(genderArray[i].checked){
+                        gender = genderArray[i].value
+                    }
+            }
+        let city =document.getElementById("city").value
+        
+        let subscription = document.getElementById("status").checked
+        let status
+        if(subscription){
+            status = document.getElementById("status").value
+        }else{
+            status = document.getElementById("status").value="No"
+        }
+
+       // console.log(firstName,email,gender,city,status )
+        let userData={
+            firstName:firstName,
+            email:email,
+            gender:gender,
+            city:city,
+            status:status
+        }
+
+        console.log(userData)
+    }
+    </script>
+</body>
+</html>
