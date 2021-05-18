@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table,th,td{
+            border:1px solid black;
+        }
+    </style>
 </head>
 <body>
     <form>
@@ -22,6 +27,9 @@
 
         <button type="button" onclick="sendComment()">Post Comment</button>
         <button type="button" onclick="getAllComments()">Get Comments</button>
+
+        <div id="output"></div>
+        <p id ="msg"></p>
     </form>
 
     <script src="./comments.js"></script>

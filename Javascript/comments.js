@@ -46,7 +46,30 @@ function getAllComments() {
   commentReq.send();
   commentReq.onload = function () {
     if (commentReq.status == 200) {
-      console.log(commentReq.response);
+      //console.log(commentReq.response);
+      let res = commentReq.response;
+      let result = JSON.parse(res);
+      console.log(result);
+      let commentsTable = `<table>
+      <tr>
+        <th>Post ID</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Comment</th>
+      </tr>`;
+      result.map((item, id) => {
+        commentsTable += `<tr>
+          <td>${item.postId}</td>
+          <td>${item.id}</td>
+          <td>${item.name}</td>
+          <td>${item.email}</td>
+          <td>${item.body}</td>
+        </tr>`;
+      });
+      console.log(commentsTable);
+      document.getElementById("output").innerHTML = commentsTable;
+      //document.getElementById("msg").innerHTML = "<b>Success</b>";
     }
   };
 }
