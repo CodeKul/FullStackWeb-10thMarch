@@ -15,14 +15,29 @@ function getCommentData() {
 
 function sendComment() {
   let commentData = getCommentData();
+  //axios.method(url,body,{headers})
   let p = axios.post(
     "https://jsonplaceholder.typicode.com/comments",
     JSON.stringify(commentData),
-    {
-      "Content-type": "application",
-    }
+    { "Content-type": "application/json" }
   );
+  console.log(p);
   p.then(function (response) {
-    console.log(response.data);
+    console.log(response.data.id);
   });
+}
+
+function getAllComments(){
+    let p = axios.get("https://jsonplaceholder.typicode.com/comments",{ "Content-type": "application/json" })
+    p.then(function(comments){
+      let result = comments.data
+      let output=""
+      
+      result.map((item,id)=>{
+         output+=`<p>${item.body}</p>`
+
+      })
+      document.getElementById("output").innerHTML=output
+
+    })
 }

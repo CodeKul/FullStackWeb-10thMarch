@@ -14,22 +14,20 @@ function getCommentData() {
 }
 
 function sendComment() {
+  // fetch(url,{method,headers,body})  returns a promise
   let comment = getCommentData();
-  //console.log(comment)
-  fetch("https://jsonplaceholder.typicode.com/comments", {
+  let p = fetch("https://jsonplaceholder.typicode.com/comments", {
     method: "POST",
     headers: {
       "Content-type": "application/json",
     },
     body: JSON.stringify(comment),
-  })
-    .then(function (response) {
-      console.log(response.json());
-    })
-    .catch(function (errMsg) {
-      console.log(errMsg);
-    });
-  //console.log(returnValue);
+  });
+  p.then(function (response) {
+    console.log(response.json());
+  }).catch(function (errMsg) {
+    console.log(errMsg);
+  });
 }
 
 function getAllComments() {
@@ -39,32 +37,30 @@ function getAllComments() {
       "Content-type": "application/json",
     },
   })
-    .then(function (response) {
-      let output = response.json();
-      return output;
+    .then(function (res) {
+      let result = res.json();
+      // [{},{},{}...{500}]
+      return result;
     })
-    .then(function (output) {
-      let commentsTable = `<table>
-        <tr>
-            <th>Post ID</th>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Comment</th>
-        </tr>`;
-        
-      output.map((comment, id) => {
-        commentsTable = commentsTable +  `<tr>
-                <td>${comment.postId}</td>
-                <td>${comment.id}</td>
-                <td>${comment.name}</td>
-                <td>${comment.email}</td>
-                <td>${comment.body}</td>
+    .then(function (result) {
+      console.log(result);
+      let outputTable = `<table>
+      <tr>
+        <th>Post ID</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Comment</th>
+      </tr>`;
+      result.map(function (item, id) {
+        outputTable += `<tr>
+              <td>${item.postId}</td>
+              <td>${item.id}</td>
+              <td>${item.name}</td>
+              <td>${item.email}</td>
+              <td>${item.body}</td>
             </tr>`;
       });
-      document.getElementById("output").innerHTML = commentsTable;
-    })
-    .catch(function(errMsg){
-        console.log(errMsg)
-    })
+      document.getElementById("output").innerHTML = outputTable;
+    });
 }
