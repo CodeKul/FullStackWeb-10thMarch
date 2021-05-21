@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="msg"></h1>
+    <h3 id="myName"></h3>
+    <p id="exp"></p>
+
+    <h3>Skill Set</h3>
+    <ul id="skills"></ul>
+    <h4>Person Details</h4>
+    <p id="sal"></p>
+    <p id="city"></p>
+    <p id="email"></p>
+    <script type="module">
+        import {myName,calculation,x,skills} from './myModule.js' //named imports
+        import person from './myModuleOne.js'
+        import msg from './myModuleTwo.js'
+        let name = myName()
+        let output =document.getElementById("myName")
+        output.innerHTML=name
+        console.log(output)
+        let exp  =calculation(20,70)
+        document.getElementById("exp").innerHTML=exp+x
+
+       let skillSet=""
+        skills.map((skill,id)=>{
+            skillSet += `<li>${skill}</li>`
+        })
+
+        let [s,c,e] = person(50000,"Pune","abc@gmail.com")
+        document.getElementById("sal").innerHTML=s
+        document.getElementById("city").innerHTML=c
+        document.getElementById("email").innerHTML=e
+        document.getElementById("skills").innerHTML=skillSet
+        document.getElementById("msg").innerHTML=msg
+    </script>
+</body>
+</html>
