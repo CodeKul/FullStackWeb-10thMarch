@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Open Ad</button>
+    <button id="btn1">Another Ad</button>
+    <button id="closebtn">Close</button>
+    <script>
+        // window.alert()
+    // alert("Window Object")
+    // let value= confirm("Are you sure?")
+    // console.log(value)
+
+    // let x = prompt("Enter a number",0)
+    // console.log(x)
+
+    
+    console.log(window.outerHeight)
+    console.log(window.outerWidth)
+
+    let innerH = window.innerHeight
+    let innerW = window.innerWidth
+    console.log(innerH,innerW)
+
+    let winId
+    let btn  = document.getElementById("btn")
+    btn.addEventListener('click',()=>{
+        //window.open(url,name,features)
+        winId=window.open("https://stackoverflow.com/questions/12066093/what-is-the-difference-between-window-innerwidth-window-outerwidth",
+                    'ad',"height=500,width=400")
+    })
+    
+    let btn1= document.getElementById("btn1")
+    btn1.addEventListener('click',()=>{
+        window.open("https://www.google.com/",'google',"height=500,width=400")
+    })
+
+
+    let closebtn = document.getElementById("closebtn")
+    closebtn.addEventListener('click',()=>{
+            winId.close()
+    })
+
+    </script>
+</body>
+</html>
