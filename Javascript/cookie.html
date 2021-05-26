@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // cookies - 
+        //4kb ,kept in browser and sent to server as well,developer has to specify,HTML4/HTML5
+
+        //local storage - setItem(key,value),getItem(key),removeItem(key)
+        //10mb,kept on browser only,never,HTML5
+
+        //session storage - setItem(key,value),getItem(key),removeItem(key)
+        //5mb,kept on browser only,session,HTML5
+
+
+
+        document.cookie="username=abc;expires="+new Date(2021,5,26).toUTCString()
+        document.cookie="city=Pune;"
+        console.log(document.cookie)
+
+
+        // localStorage.setItem("userid","xyz")
+        // localStorage.setItem("email","xyz@gmail.com")
+        // localStorage.setItem("active","true")
+
+        let userName =localStorage.getItem("userName")
+        let email = localStorage.getItem("email")
+        console.log(userName , email)
+        localStorage.removeItem("userId")
+
+
+    </script>
+</body>
+</html>
