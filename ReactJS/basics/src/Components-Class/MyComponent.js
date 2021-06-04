@@ -16,6 +16,9 @@ class MyComponent extends React.Component {
           </tr>
           <ProductBody products={this.props.products}/>
         </table>
+
+
+        <h1>{this.props.countValue}</h1>
       </div>
     );
   }
