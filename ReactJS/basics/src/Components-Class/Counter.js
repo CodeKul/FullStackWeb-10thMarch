@@ -9,6 +9,24 @@ class Counter extends React.Component {
     };
   }
 
+  componentDidMount() {
+    console.log("After Mount");  //API Calls
+  }
+
+  componentWillUpdate(){
+    console.log("Will Update")
+  }
+  shouldComponentUpdate() {
+    console.log("should Update")
+    return true;
+  }
+
+ 
+
+  componentDidUpdate() {
+    console.log("Inside component did update");
+  }
+
   incrementCounter = () => {
     this.setState({ count: this.state.count + 1 });
   };
@@ -24,7 +42,7 @@ class Counter extends React.Component {
         <h4>{this.state.count}</h4>
         <button onClick={this.incrementCounter}>Increment</button>
         <button onClick={this.decrementCounter}>Decrement</button>
-        <DisplayCountValue countValue={this.state.count}/>
+        <DisplayCountValue countValue={this.state.count} />
       </div>
     );
   }
