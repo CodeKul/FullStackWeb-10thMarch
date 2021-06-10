@@ -6,6 +6,11 @@ import ProductTable from "./Components-Class/ProductTable";
 import ProductFunction from "./Components-Function/ProductFunction";
 import Course from "./Components-Class/Course";
 import Counter from "./Components-Class/Counter";
+import Clock from "./Components-Class/Clock";
+import CheckLogin from "./Conditional Rendering/CheckLogin";
+import HandleLogin from "./Conditional Rendering/HandleLogin";
+import Categories from "./Conditional Rendering/Categories";
+import CourseDetails from "./Conditional Rendering/CourseDetails";
 function App() {
   let courseName = "Data Science";
   let salary = 1000;
@@ -32,10 +37,11 @@ function App() {
     },
   ];
   let seasons = ["Summer", "winter", "Rainy"];
+
   return (
     // jsx
     <div>
-      <MyComponent products={products} />
+      {/* <MyComponent products={products} /> */}
       {/*<AnotherComponent/> */}
 
       {/* <ProductTable/>
@@ -53,10 +59,15 @@ function App() {
         seasons={seasons}
       />
     <ProductFunction/> */}
+      {/* <Counter/><Clock /> */}
 
+      {/* <CheckLogin isLoggedIn={true} />*/}
 
+      {/* <HandleLogin />  */}
 
-    <Counter/>
+      {/* <Categories/> */}
+
+      <CourseDetails/>
     </div>
   );
 }

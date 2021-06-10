@@ -1,4 +1,6 @@
 import React from "react";
+import Login from "./Login";
+import Logout from "./Logout";
 class HandleLogin extends React.Component {
   // 1)if else
   //2)ternary operator
@@ -7,7 +9,7 @@ class HandleLogin extends React.Component {
   constructor() {
     super();
     this.state = {
-      isLoggedIn: false,
+      isLoggedIn: true,
     };
   }
 
@@ -21,9 +23,9 @@ class HandleLogin extends React.Component {
   render() {
     let element;
     if (this.state.isLoggedIn) {
-      element = <button onClick={this.handleLogin}>Login</button>;
+      element = <Login displayLogin={this.handleLogin}/>
     } else {
-      element = <button onClick={this.handleLogout}>Logout</button>;
+      element = <Logout displayLogout={this.handleLogout}/>
     }
     return <div>{element}</div>;
   }
