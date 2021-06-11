@@ -1,5 +1,5 @@
 import React from "react";
-
+//useState(),useEffect - 
 function DisplayCourses(props) {
   console.log(props);
   return (
