@@ -1,5 +1,7 @@
-import React from "react";
+import React,{useState} from "react";
 function CourseDetails() {
+  //const[course,setCourse]=useState({})
+  
   let course = {
     courseName: "HTML",
     rating: 4,
