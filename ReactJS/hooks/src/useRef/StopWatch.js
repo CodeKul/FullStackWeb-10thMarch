@@ -12,15 +12,20 @@ function StopWatch() {
 
   const stopTimer = () => {
     clearInterval(timerRef.current);
-    timerRef.current= 0 
+    timerRef.current = 0;
   };
-  
+
+  const resetTimer = () => {
+    clearInterval(timerRef.current);
+    timerRef.current = 0;
+    setCount(0);
+  };
   return (
     <div>
       <p>{count}</p>
       <button onClick={startTimer}>Start</button>
       <button onClick={stopTimer}>Stop</button>
-      <button>Reset</button>
+      <button onClick={resetTimer}>Reset</button>
     </div>
   );
 }
