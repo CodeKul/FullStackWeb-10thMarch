@@ -12,6 +12,8 @@ export function BookProvider(props) {
     },
   ]);
   return (
-    <BookContext.Provider value={books}>{props.children}</BookContext.Provider>
+    <BookContext.Provider value={[books, setBooks]}>
+      {props.children}
+    </BookContext.Provider>
   );
 }

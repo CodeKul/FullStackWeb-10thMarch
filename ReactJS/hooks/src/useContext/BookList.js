@@ -3,9 +3,9 @@ import Book from "./Book";
 import { useContext } from "react";
 import { BookContext } from "./BookContext";
 function BookList() {
-  const books = useContext(BookContext);
+  const [books, setBooks] = useContext(BookContext);
   return (
-    <div>
+    <div style={{ marginLeft: "50px" }}>
       {books.map((book, id) => (
         <Book bookName={book.bookName} price={book.price} />
       ))}
