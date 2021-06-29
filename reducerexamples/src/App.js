@@ -1,5 +1,6 @@
 import Counter from "./components/Counter";
 import RangeCounter from "./components/RangeCounter";
+import TodoList from "./components/TodoList";
 function App() {
   return (
     <div>
@@ -7,6 +8,8 @@ function App() {
 
       <hr />
       <RangeCounter />
+      <hr />
+      <TodoList />
     </div>
   );
 }
