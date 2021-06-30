@@ -7,22 +7,37 @@ function todoReducer(state, action) {
           ...state.todoList,
           {
             todo: action.payload,
-            completed:false
+            completed: false,
           },
         ],
       };
+    case "strike-todo":
+      //   {
+      //     todoList:[
+      //   {todo:"abc",completed:false},
+      //   {todo:"qrwy",completed:false},
+      //   {todo:"xyz",completed:true}
+      // ]
+      // }
+      return {
+        todoList: state.todoList.map((t, id) =>
+          id === action.payload ? { ...t, completed: !t.completed } : t
+        ),
+      };
+    default:
+      return state;
   }
 }
 function TodoList() {
   const [todoString, setTodo] = useState("");
   const [state, dispatch] = useReducer(todoReducer, {
     todoList: [],
-    
   });
 
   const handleSubmit = (e) => {
-      e.preventDefault()
+    e.preventDefault();
     dispatch({ type: "add-todo", payload: todoString });
+    
   };
   return (
     <div>
@@ -35,7 +50,12 @@ function TodoList() {
       </form>
 
       {state.todoList.map((t, id) => (
-        <li>{t.todo}</li>
+        <li
+          onClick={() => dispatch({ type: "strike-todo", payload: id })}
+          style={{ textDecoration: t.completed ? "line-through" : "" }}
+        >
+          {t.todo}
+        </li>
       ))}
     </div>
   );
