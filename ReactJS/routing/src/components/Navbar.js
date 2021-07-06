@@ -1,7 +1,9 @@
 import React from "react";
 import "./Navbar.css";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useRouteMatch } from "react-router-dom";
 function Navbar() {
+  const { url } = useRouteMatch();
+  console.log(url)
   return (
     <nav>
       <ul>
@@ -13,7 +15,7 @@ function Navbar() {
         </li>
         <li>
           {/* <Link to="/about">About</Link> */}
-          <NavLink to="/about">About</NavLink>
+          <NavLink to={`/about`}>About</NavLink>
         </li>
         <li>
           {/* <Link to="/contact">Contact</Link> */}
@@ -21,7 +23,7 @@ function Navbar() {
         </li>
         <li>
           {/* <Link to="/contact">Contact</Link> */}
-          <NavLink to="/blog">Blog</NavLink>
+          <NavLink to="/articles">Blog</NavLink>
         </li>
       </ul>
     </nav>

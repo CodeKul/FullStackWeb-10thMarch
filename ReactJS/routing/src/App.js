@@ -1,7 +1,7 @@
 import About from "./components/About";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, useRouteMatch } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Blog from "./components/Blog";
 import BlogContent from "./components/BlogContent";
@@ -14,7 +14,12 @@ function App() {
       content: [
         {
           title: "Row and Columns in Grid",
-          id: "css",
+          id: "css1",
+          description: "lorem ipsum en",
+        },
+        {
+          title: "Borders",
+          id: "css2",
           description: "lorem ipsum en",
         },
       ],
@@ -26,12 +31,26 @@ function App() {
       content: [
         {
           title: "Capturing and Bubbling",
-          id: "js",
+          id: "js1",
+          description: "lorem ipsum en",
+        },
+      ],
+    },
+
+    {
+      topicName: "React Routing",
+      id: 3,
+      description: "lorem ipsum",
+      content: [
+        {
+          title: "URL PArams",
+          id: "route",
           description: "lorem ipsum en",
         },
       ],
     },
   ];
+
   return (
     <div>
       <BrowserRouter>
@@ -50,11 +69,8 @@ function App() {
           <Route path="/contact">
             <Contact />
           </Route>
-          <Route exact path="/blog">
+          <Route path="/articles">
             <Blog topics={topics} />
-          </Route>
-          <Route path="/blog/:topicId">
-            <BlogContent topics={topics} />
           </Route>
         </Switch>
       </BrowserRouter>
