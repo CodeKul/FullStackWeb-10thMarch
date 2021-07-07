@@ -5,6 +5,8 @@ import { BrowserRouter, Route, Switch, useRouteMatch } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Blog from "./components/Blog";
 import BlogContent from "./components/BlogContent";
+import Game from "./components/Game";
+import GameResult from "./components/GameResult";
 function App() {
   let topics = [
     {
@@ -66,12 +68,13 @@ function App() {
             <About />
           </Route> */}
 
-          <Route path="/contact">
-            <Contact />
-          </Route>
+          <Route path="/contact" component={Contact} />
+
           <Route path="/articles">
             <Blog topics={topics} />
           </Route>
+          <Route path="/game" component={Game} />
+          <Route path="/result" component={GameResult} />
         </Switch>
       </BrowserRouter>
     </div>

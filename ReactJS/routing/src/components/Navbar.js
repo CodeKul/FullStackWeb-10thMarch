@@ -3,7 +3,7 @@ import "./Navbar.css";
 import { Link, NavLink, useRouteMatch } from "react-router-dom";
 function Navbar() {
   const { url } = useRouteMatch();
-  console.log(url)
+  console.log(url);
   return (
     <nav>
       <ul>
@@ -24,6 +24,10 @@ function Navbar() {
         <li>
           {/* <Link to="/contact">Contact</Link> */}
           <NavLink to="/articles">Blog</NavLink>
+        </li>
+        <li>
+          {/* <Link to="/contact">Contact</Link> */}
+          <NavLink to="/game">Play a game</NavLink>
         </li>
       </ul>
     </nav>
