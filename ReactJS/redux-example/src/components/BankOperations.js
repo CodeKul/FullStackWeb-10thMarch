@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./Bank.css";
+import { useDispatch } from "react-redux";
 function BankOperations() {
   const [amt, setAmt] = useState("");
+  const dispatch = useDispatch();
   const getAmount = (e) => {
     setAmt(e.target.value);
   };
@@ -16,11 +18,41 @@ function BankOperations() {
             onChange={getAmount}
           />
         </div>
-        <button className="btn">Deposit</button>
-        <button className="btn">Withdraw</button>
-        <button className="btn">Interest</button>
-        <button className="btn">Delete</button>
-        <button className="btn">Change Account Type</button>
+        <button
+          type="button"
+          className="btn"
+          onClick={() => dispatch({ type: "deposit", payload: Number(amt) })}
+        >
+          Deposit
+        </button>
+        <button
+          type="button"
+          className="btn"
+          onClick={() => dispatch({ type: "withdraw", payload: Number(amt) })}
+        >
+          Withdraw
+        </button>
+        <button
+          type="button"
+          className="btn"
+          onClick={() => dispatch({ type: "interest" })}
+        >
+          Interest
+        </button>
+        <button
+          type="button"
+          className="btn"
+          onClick={() => dispatch({ type: "delete-acct" })}
+        >
+          Delete
+        </button>
+        <button
+          type="button"
+          className="btn"
+          onClick={() => dispatch({ type: "change-acct" })}
+        >
+          Change Account Type
+        </button>
       </form>
     </div>
   );

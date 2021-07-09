@@ -5,8 +5,10 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-
-const bankStore = createStore();
+import { bankReducer } from "./components/reducers/bankReducer";
+const bankStore = createStore(bankReducer);
+let x =bankStore.getState();
+console.log(x)
 ReactDOM.render(
   <Provider store={bankStore}>
     <App />
