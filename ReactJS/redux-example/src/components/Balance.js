@@ -2,11 +2,17 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 function Balance() {
-  const {balance} = useSelector((state) => state);
+  // const {
+  //   banking: { balance },
+  // } = useSelector((state) => state);
+
+  const bank = useSelector((state) => state.banking);
+  console.log(bank);
   //console.log(balanceAmount);
   return (
     <div>
-      <h2>{balance}</h2>
+      <h2>{bank.balance}</h2>
+      
     </div>
   );
 }

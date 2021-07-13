@@ -6,9 +6,11 @@ import reportWebVitals from "./reportWebVitals";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { bankReducer } from "./components/reducers/bankReducer";
-const bankStore = createStore(bankReducer);
-let x =bankStore.getState();
-console.log(x)
+import { rootReducer } from "./components/reducers/combineReducers";
+const bankStore = createStore(rootReducer);
+
+let x = bankStore.getState();
+console.log(x);
 ReactDOM.render(
   <Provider store={bankStore}>
     <App />

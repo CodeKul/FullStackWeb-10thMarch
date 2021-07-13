@@ -15,6 +15,12 @@
   color: white;
 }
 
+.btn-login:hover{
+    background-color: white;
+    color:navy;
+    border:2px solid navy;
+}
+
 .input-balance {
   height: 30px;
   border-radius: 4px;

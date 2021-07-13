@@ -1,6 +1,7 @@
 const intialState = {
   balance: 0,
   isSavings: true,
+  
 };
 
 // action={type:"deposit",payload:100}
