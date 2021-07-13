@@ -1,0 +1,22 @@
+.nav {
+}
+
+nav .navbar-brand {
+  color: white;
+}
+nav .navbar-nav li a {
+  color: white;
+  text-transform: uppercase;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+nav .navbar-nav li a:hover {
+  transform: translateY(4px);
+  transition: transform 2s;
+}
+
+.color-white {
+  color: white;
+}

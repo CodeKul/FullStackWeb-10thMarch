@@ -1,0 +1,30 @@
+#about .about-content {
+  flex-wrap: nowrap;
+}
+#about .about-text {
+  width: 45%;
+}
+#about .about-photo {
+  width: 350px;
+}
+
+.about-text .content .social-icons i {
+  font-size: 22px;
+  margin-right: 20px;
+}
+
+.about-text .content .social-icons a {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  #about .about-content {
+    flex-wrap: wrap;
+  }
+  #about .about-text {
+    width: 100%;
+  }
+  #about .about-photo {
+    width: 100%;
+  }
+}

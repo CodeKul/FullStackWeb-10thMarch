@@ -1,0 +1,16 @@
+/* .accordion-button {
+  background-color: violet;
+  color: black;
+} */
+
+
+
+.accordion-button,
+.accordion-button:not(.collapsed) {
+  background-color: white;
+  color: black;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
