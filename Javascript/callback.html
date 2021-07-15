@@ -23,7 +23,8 @@
            msg()
        }
         setTimeout(greet,5000,msg)
-       function msg(){
+       
+        function msg(){
            console.log("Hello World")
        }
 
@@ -37,17 +38,14 @@
                console.log("Please try again later")
            }
        }
-
-       function modifySalary(salary){
+        function modifySalary(salary){
             salary = salary + 5000
             displaySalary(salary)
        }
 
-
-       function displaySalary(salary){
+        function displaySalary(salary){
            console.log("Salary is : "+ salary)
-       }
-    
+        }
     setTimeout(salaryCheck,3000,100,10000,modifySalary)
     
     //drawback - callback hell
