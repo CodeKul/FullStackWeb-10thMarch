@@ -1,0 +1,11 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+  border: 2px solid blue;
+}
+
+.btn {
+  background-color: lightseagreen;
+  border: none;
+  padding: 8px;
+}
