@@ -1,9 +1,20 @@
 import "./App.css";
-import User from './User'
+import Sample from "./Styling/Sample";
+import Sample2 from "./Styling/Sample2";
+import User from "./User";
+import Useraxios from "./Useraxios";
+import StyledComponents from "./Styling/StyledComponents";
 function App() {
-  return <div>
-    <User></User>
-  </div>;
+  return (
+    <div>
+      {/* <Useraxios /> */}
+
+      {/* <Sample />
+      <Sample2 /> */}
+
+      <StyledComponents />
+    </div>
+  );
 }
 
 export default App;

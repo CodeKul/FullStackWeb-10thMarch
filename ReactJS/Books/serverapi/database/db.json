@@ -1,0 +1,16 @@
+{
+    "books":[
+        {
+            "id":1,
+            "bookName":"ABC",
+            "authorName":"X",
+            "rating":4
+        },
+        {
+            "id":2,
+            "bookName":"qwerty",
+            "authorName":"Y",
+            "rating":4
+        }
+    ]
+}
