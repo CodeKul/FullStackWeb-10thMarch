@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import apicall from "../services/apicall";
 function BooksList() {
   const [booksList, setBooks] = useState([]);
@@ -14,22 +15,32 @@ function BooksList() {
     console.log(booksList);
   };
   return (
-    <div className="container">
-      <table className="table table-striped">
-        <tr>
-          <th>Sr.No</th>
-          <th>Book Name</th>
-          <th>Author Name</th>
-          <th>Rating</th>
-        </tr>
-        {booksList.map((book, id) => (
-          <tr key={id}>
-            <td>{book.id}</td>
-            <td>{book.bookName}</td>
-            <td>{book.authorName}</td>
-            <td>{book.rating}</td>
+    <div className="container mt-5">
+      <div className="text-end mb-3 mt-5">
+        <Link to="/addbook" className="btn btn-outline-dark">
+          Add Book
+        </Link>
+      </div>
+      <h4 className="text-center fs-2">Books List</h4>
+      <table className="table table-dark">
+        <thead>
+          <tr className="">
+            <th>Sr.No</th>
+            <th>Book Name</th>
+            <th>Author Name</th>
+            <th>Rating</th>
           </tr>
-        ))}
+        </thead>
+        <tbody>
+          {booksList.map((book, id) => (
+            <tr key={id} className="">
+              <td>{book.id}</td>
+              <td>{book.bookName}</td>
+              <td>{book.authorName}</td>
+              <td>{book.rating}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </div>
   );
