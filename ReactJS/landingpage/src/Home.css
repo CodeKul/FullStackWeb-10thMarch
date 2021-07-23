@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  /* background-color: black; */
 }
 .main {
   width: 85%;
@@ -12,6 +12,18 @@ body {
 }
 .menu-icon {
   color: white;
+  z-index: 999;
+  position: relative;
+  right: 0;
+  transition: 0.6s;
+}
+.menu-icon:hover {
+  cursor: pointer;
+}
+.menu-icon.move {
+  position: relative;
+  right: 300px;
+  transition: 0.6s;
 }
 .main header {
   display: flex;
@@ -77,4 +89,35 @@ body {
   top: 0;
   left: 0;
   object-fit: cover;
+  z-index: -5;
+}
+
+.menu.active {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 40px;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.menu {
+  display: none;
+}
+.menu ul{
+  transition: 0.5s;
+}
+.menu ul li {
+  list-style: none;
+  font-size: 20px;
+}
+
+.menu ul li:hover {
+  cursor: pointer;
+  color: lightseagreen;
 }
